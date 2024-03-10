@@ -21,11 +21,11 @@ TEST(CircleTest, SetFerence) {
     EXPECT_NEAR(c.getFerence(), 9 * PI, EPS);
 }
 TEST(CircleTest, setPositiveRadius) {
-    auto c = Circle(2.0);
+    Circle c = Circle(2.0);
     c.setRadius(3.0);
     EXPECT_NEAR(c.getRadius(), 3.0, EPS);
     EXPECT_NEAR(c.getArea(), 9 * PI, EPS);
-    EXPECT_NEAR(c.getFerence(), 9 * PI, EPS);
+    EXPECT_NEAR(c.getFerence(), 6 * PI, EPS);
 }
 TEST(CircleTest, setNullRadius) {
     Circle c = Circle(2.0);

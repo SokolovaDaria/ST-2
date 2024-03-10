@@ -37,7 +37,7 @@ void Circle::setArea(double newArea) {
         throw std::invalid_argument("area");
     }
     Circle::area = newArea;
-    Circle::radius = sqrt(Circle::area * PI);
+    Circle::radius = sqrt(Circle::area / PI);
     Circle::ference = 2.0 * PI * Circle::radius;
 }
 

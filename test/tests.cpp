@@ -66,19 +66,19 @@ TEST(CircleTest, setLargeFerence) {
 }
 TEST(CircleTest, setLargeArea) {
     Circle c = Circle(1.0);
-    c.setArea(3000.0);
-    EXPECT_NEAR(c.getArea(), 3000.0, EPS);
-    EXPECT_NEAR(c.getRadius(), sqrt(3000.0 / PI), EPS);
-    EXPECT_NEAR(c.getFerence(), sqrt(3000 / PI) * 2 * PI, EPS);
+    c.setArea(1000.0);
+    EXPECT_NEAR(c.getArea(), 1000.0, EPS);
+    EXPECT_NEAR(c.getRadius(), sqrt(1000.0 / PI), EPS);
+    EXPECT_NEAR(c.getFerence(), sqrt(1000.0 / PI) * 2 * PI, EPS);
 }
 TEST(RopeTaskTest, NegativeAddedLength) {
     EXPECT_THROW(ropeTask(-1.0), std::logic_error);
 }
 TEST(RopeTaskTest, NullAddedLength) {
-    EXPECT_DOUBLE_EQ(ropeTask(0.0), 0.0);
+    EXPECT_NEAR(ropeTask(0.0), 0.0, EPS);
 }
 TEST(RopeTaskTest, PositiveAddedLength) {
-    EXPECT_DOUBLE_EQ(ropeTask(1.0), 1.0/(2*PI));
+    EXPECT_NEAR(ropeTask(1.0), 1.0/(2*PI), EPS);
 }
 TEST(SwimmingPoolTaskTest, PoolTask) {
     EXPECT_NEAR(

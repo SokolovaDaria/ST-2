@@ -17,7 +17,7 @@ double swimmingPoolTask(double poolRadius,
     double pathWidth,
     double priceCoverage,
     double priceFence) {
-    if (poolRadius <= 0) throw
+    if (poolRadius <= 0 || pathWidth <= 0) throw
         std::logic_error("invalid error");
     Circle pool = Circle(poolRadius);
     Circle poolWithArea = Circle(poolRadius + pathWidth);
